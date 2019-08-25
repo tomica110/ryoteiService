@@ -1,0 +1,6 @@
+// comment
+'use strict'
+
+{
+
+}
