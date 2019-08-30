@@ -1,13 +1,52 @@
 /* comment */
 /* //////////////////////////////header ////////////////////////////////////////*/
+.bg-color1
+{
+  background-color: #4DB6AC;
+  opacity: 0.8;
+  /* position: fixed;
+   display: flex;
+  top: 0;
+  left: 0; */
+}
+/* #FCE4EC #FF6F00 */
 
 
 /*/////////////////////////////// main /////////////////////////////////////////*/
+                /* //////////////共通////////////////// */
+.background-option
+{
+  width: 100vw;
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+}
+.bg-color2
+{
+  background-color: #FCE4EC;
+  opacity: 0.5;
+}
+.box1
+{
+  position: absolute;
+  top: 15%;
+  left: 10%;
+}
 
+/* //////////////////////各部位////////////////////// */
 
-
-
-
+.bg-picture1
+{
+  background-image: url(../img/bg-picture1.jpg);
+}
+.bg-picture2
+{
+  background-color: #FF6F00;
+  background-image: url(../img/bg-picture2.jpg);
+}
 
 
 /*////////////////////////////// footer /////////////////////////////////////////*/
