@@ -2,8 +2,100 @@
 body
 {
   /* font-family: 'Caveat', cursive; */
-  font-family: 'Noto Serif JP', serif;
+  font-family: 'Noto Serif JP', serif !important;
+
 }
+
+/* ///////////////////////////loding///////////////////// */
+.page-loader {
+  position: fixed;
+  z-index: 10001;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #4DB6AC; //ローディング画面の背景色
+}
+
+.spinner
+ {
+  margin: 50vh auto;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  text-align: center;
+
+  -webkit-animation: sk-rotate 2.0s infinite linear;
+  animation: sk-rotate 2.0s infinite linear;
+}
+
+.dot1, .dot2
+{
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: #333;
+  border-radius: 100%;
+
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+.dot2
+{
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+/* //////////////cursor////////////// */
+body
+{
+  position: relative;
+  cursor: none; //もともとあるカーソルは見えなくなるようにする
+}
+
+.cursor,.follower
+{
+  border-radius: 50%;
+  position: absolute; //bodyの一番左上になるように配置する
+  top: 0;
+  left: 0;
+  cursor: none; //もともとあるカーソルは見えなくなるようにする
+  pointer-events: none;//他の要素がクリックできなくならないように
+}
+
+.cursor {
+  z-index: 1001; //どの要素よりも一番上になるようにする
+}
+
+.follower {
+  width: 40px;
+  height: 40px;
+  background-color: #fdfe00;
+  z-index: 1000; //カーソルの次に上になるようにする
+}
+
+
 /* //////////////////////////////header ////////////////////////////////////////*/
 .bg-color1
 {
@@ -75,7 +167,7 @@ body
   line-height: 54px;
   outline: none;
   position: relative;
-  z-index: 2;
+
   border: 2px solid #333;
   color: #fff;
   line-height: 50px;
@@ -87,6 +179,8 @@ body
   -webkit-border-radius: 0px 30px 30px 0px;
   -moz-border-radius: 0px 30px 30px 0px;
   margin-bottom: 1em;
+  z-index: 1002;
+  cursor: pointer !important;
 }
 .button1:hover
 {
@@ -163,6 +257,7 @@ body
   font-size:15px;
   line-height:24px;
   color:#FCE4EC;
+  z-index: 1005 !important;
 }
 .site-footer hr
 {
@@ -194,6 +289,8 @@ body
 {
   padding-left:0;
   list-style:none;
+  cursor: pointer !important;
+  z-index: 1003 !important;
 }
 .footer-links li
 {
